@@ -66,7 +66,8 @@ Withdrawn to: 0xEb213dBEB7160aa98CfE738449007e00ffc74BAB
 
   fs.appendFileSync('profit-log.txt', log);
 
-  const msg = `💹 *Arbitrage Trade Executed*\n\n*Token:* ${result.token}\n*DEX In:* ${result.dexIn}\n*DEX Out:* ${result.dexOut}\n*Profit:* ${result.profit} USDC\n*Withdrawn:* \`${process.env.WITHDRAW_WALLET}\`\n*Tx Hash:* \`${result.txHash}\``;
+  const msg = `💹 *Arbitrage Trade Executed*\n\n*Token:* ${result.token}\n*DEX In:* ${result.dexIn}\n*DEX Out:* ${result.dexOut}\n*Profit:* ${result.profit} USDC\n*Withdrawn:* `0xEb213dBEB7160aa98CfE738449007e00ffc74BAB`
+\n*Tx Hash:* \`${result.txHash}\``;
 
   ctx.telegram.sendMessage(process.env.CHAT_ID, msg, { parse_mode: 'Markdown' });
 
