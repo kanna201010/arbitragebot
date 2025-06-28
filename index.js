@@ -1,6 +1,7 @@
 require('dotenv').config();
 const fs = require('fs');
 const { Telegraf, Markup } = require('telegraf');
+console.log("TELEGRAM_TOKEN:", process.env.TELEGRAM_TOKEN);
 
 const bot = new Telegraf(process.env.TELEGRAM_TOKEN);
 let botRunning = false;
